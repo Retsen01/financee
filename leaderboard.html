@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboard
+{% endblock %}
+
+{% block main %}
+
+<h1>Leaderboard</h1>
+
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th class="p-5">Rank</th>
+            <th class="p-5">User</th>
+            <th class="p-5">Net-worth</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in arr%}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</div>
+<footer>
+    <a class="nav-link mt-4 p-2" href="/">Back to homepage</a>
+</footer>
+{% endblock %}

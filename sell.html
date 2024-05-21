@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+
+<h1>SELL</h1>
+
+<p>Select stock symbol</p>
+
+<form action="/sell" method="post">
+
+    <select name="symbol" autofocus class="form-control mx-auto w-auto">
+        <option value="">Select Symbol</option>
+        <!-- Add your options here -->
+        {% for row in arr%}
+            <option>{{row}}</option>
+        {% endfor %}
+    </select>
+
+    <input name="shares"class="form-control mx-auto w-auto mt-5" placeholder="Shares" type="number">
+
+    <button type="submit" class="mt-5">Submit</button>
+</form>
+
+<footer>
+    <a class="nav-link mt-4 p-2" href="/">Back to homepage</a>
+</footer>
+{% endblock %}
