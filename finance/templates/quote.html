@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+
+<h1>Quote</h1>
+
+<p>Enter stock symbol</p>
+
+<form action="/quote" method="post">
+    <input name="symbol"autofocus class="form-control mx-auto w-auto" placeholder="Symbol">
+    <button type="submit" class="mt-5">Submit</button>
+</form>
+
+<footer>
+    <a class="nav-link mt-4 p-2" href="/">Back to homepage</a>
+</footer>
+{% endblock %}
+

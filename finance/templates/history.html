@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+<h1>HISTORY</h1>
+
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th class="p-5">Symbol</th>
+            <th class="p-5">Transaction type</th>
+            <th class="p-5">Price</th>
+            <th class="p-5">Shares</th>
+            <th class="p-5">Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in arr%}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+<footer>
+    <a class="nav-link mt-4 p-2" href="/">Back to homepage</a>
+</footer>
+
+
+{% endblock %}
